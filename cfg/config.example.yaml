@@ -1,0 +1,39 @@
+sources:
+  claude:
+    enabled: true
+    path: ~/.claude/projects
+  codex:
+    enabled: true
+    path: ~/.codex
+  cursor:
+    enabled: true
+    path: ~/Library/Application Support/Cursor
+  git:
+    enabled: true
+    # Leave empty to auto-discover first-level repos under ~/work_space.
+    repos: []
+
+output:
+  directory: ./reports
+  timezone: Asia/Shanghai
+
+state:
+  backend: sqlite
+  mysql:
+    host: 127.0.0.1
+    port: 3306
+    user: root
+    password: ""
+    password_env: DREP_MYSQL_PASSWORD
+    database: drep
+
+notify:
+  enabled: false
+  channel: qq
+  qq:
+    provider: official
+    app_id: ""
+    client_secret_env: QQBOT_CLIENT_SECRET
+    target_type: c2c
+    target_id: ""
+    markdown: false
